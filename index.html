@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Film-Site</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgba(6, 12, 26, 1);
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        h1, h2, h3, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        tr {
+            display: table-row;
+            width: 100%;
+            border: 0;
+        }
+
+        td {
+            border: 0;
+            border-collapse: collapse;
+        }
+
+
+
+
+        /*==========Header==========*/
+        .header {
+            margin: 0;
+            align-items: center;
+            border-collapse: collapse;
+            background-color: rgba(6, 12, 26, 1);
+            border-bottom: 1px solid #73582f;
+            height: 100px;
+            width: 100%;
+        }
+
+        .menu {
+            text-align: right;
+            padding: 20px 80px;
+        }
+
+        h1 {
+            text-decoration: underline;
+        }
+
+        .header_title img, .header_title h1 {
+            vertical-align: middle;
+            display: inline-block;
+        }
+
+        .header_table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 0;
+            height: 100px;
+        }
+
+        .header_title {
+            align-items: center;
+            text-align: center;
+        }
+        .main_icon {
+            max-width: 45px;
+        }
+
+
+        .menu_link {
+            color: #fff;
+            margin-left: 50px;
+            font-size: 19px;
+            position: relative;
+            transition: all .1s linear;
+        }
+
+        .menu_link:not(.main_link):hover {
+            color: #ffa51f;
+        }
+
+        .main_link {
+            color: #ffa51f;
+        }
+
+        .main_link::before {
+            content: "";
+            position: absolute;
+            bottom: -41px;
+            left: 0;
+            background-color: #ffa51f;
+            border-radius: 2px;
+            height: 3px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #ffa51f;
+            padding-left: 10px;
+        }
+
+
+
+
+
+        /*==========Main==========*/
+        .main_table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 0;
+            margin: 20px 0;
+        }
+
+        .main_left {
+            word-wrap: break-word;
+            background-color: #1f1f1f;
+            font-size: 1.2rem;
+            text-align: center;
+            width: 25%;
+            justify-content: flex-start;
+        }
+
+        .main_top {
+            background-color: #000;
+            word-wrap: break-word;
+            justify-content: flex-start;
+            max-height: 400px;
+            width: 50%;
+        }
+
+        .main_down {
+            height: 100%;
+            word-wrap: break-word;
+            padding: 10px;
+            background-color: #d99e29;
+            font-size: 1.25rem;
+            padding: 60px 50px;
+            letter-spacing: 1.05px;
+            width: 50%;
+        }
+
+        .right_top {
+            background-color: #1f1f1f;
+            height: 100%;
+            padding: 10px;
+            word-wrap: break-word;
+            padding: 30px 40px;
+            width: 25%;
+            height: 150%;
+        }
+
+        .right_down {
+            background-color: #242424;
+            padding: 15px;
+            justify-content: flex-end;
+            word-wrap: break-word;
+            text-align: center;
+            width: 25%;
+            max-height: 100px;
+        }
+
+        .left_text {
+            color: white;
+            padding: 30px 40px;
+        }
+
+        .left_title {
+            background-color: inherit;
+            color: #ffa51f;
+            padding: 0 40px;
+        }
+
+        .left_title:first-child {
+            margin-top: -140px;
+        }
+
+        .left_title:not(:first-child) {
+            margin-top: 70px;
+        }
+
+        .image_center {
+            width: 100%;
+            height: 100%;
+        }
+
+        .right_down {
+            text-align: left;
+        }
+
+        .right_down_title {
+            text-decoration: underline;
+            background-color: inherit;
+            color: #ffa51f;
+            padding: 0;
+            font-size: 1.8rem;
+        }
+
+        .right_down_list {
+            margin: 0;
+            padding: 30px 0 0 20px;
+        }
+
+        .right_down_list_link {
+            padding-bottom: 10px;
+            color: orange;
+            letter-spacing: 1.1px;
+        }
+
+        .right_down_list_link strong {
+            color: white;
+            font-size: 1.1rem;
+        }
+
+        .right_top_title {
+            background-color: inherit;
+            color: #ffa51f;
+            margin-top: 75px;
+            padding: 0;
+            font-size: 1.8rem;
+        }
+
+        .right_top_title:first-child {
+            margin-top: 75px;
+            font-size: 1.8rem;
+        }
+
+        .right_top_text {
+            color: white;
+            margin-top: 30px;
+            font-size: 1.2rem;
+        }
+
+        .right_top_list {
+            margin: 0;
+            padding: 30px 20px;
+        }
+
+        .right_list_line {
+            padding-bottom: 10px;
+            color: orange;
+            letter-spacing: 1px;
+        }
+
+        .right_top_list strong {
+            color: white;
+            font-size: 1.1rem;
+        }
+
+        .center_text:not(:last-child) {
+            padding-bottom: 30px;
+        }
+
+        .center_list {
+            margin: 0 0 0 0;
+            padding: 0 0 30px 20px;
+        }
+
+        .center_list_line:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        .center_title {
+            padding: 0 0 20px 0;
+            background-color: inherit;
+        }
+
+
+
+
+        /*==========Footer==========*/
+        .footer {
+            margin: 0;
+            padding: 30px 80px;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgba(6, 12, 26, 1);
+            border-top: 1px solid #73582f;
+            height: 100px;
+            width: 100%;
+        }
+
+        .footer_table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 0;
+            height: 100px;
+        }
+
+        .footer_box {
+            padding: 30px 80px;
+            width: 75%;
+        }
+
+        .footer p {
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer_text {
+            color: aliceblue;
+            font-size: 16px;
+        }
+
+        .title_footer {
+            text-align: center;
+            padding: 10px;
+            width: 25%;
+        }
+
+        .footer_text_title {
+            color: aliceblue;
+            font-size: 20px;
+        }
+
+        .footer_img {
+            max-width: 70px;
+            max-height: 70px
+        }
+
+    </style>
+</head>
+
+<body>
+   
+   <table class="header_table">
+        <tr class="header" colspan="3">
+            <td class="header_title">
+                <img class="main_icon" src="./img/movie.png" alt="Movie Icon">
+                <h1>Film-Time</h1>
+            </td>
+            <td class="menu">
+                <a class="menu_link main_link" href="#">Home</a>
+                <a class="menu_link" href="#">Action</a>
+                <a class="menu_link" href="#">Comedy</a>
+                <a class="menu_link" href="#">Sci-Fi</a>
+                <a class="menu_link" href="#">Fantasy</a>
+                <a class="menu_link" href="#">Historical</a>
+            </td>
+        </tr>
+    </table>
+    
+    <table class="main_table">
+        <tr>
+            <td class="main_left" rowspan="3">
+                <h2 class="left_title">The Evolution of Film Genres</h2>
+                <p class="left_text">Film genres have grown with film itself. In the early days of Hollywood filmmaking, the few existing movie genres had clear definitions. Based on their subject and style, you could sort releases easily into their respective categories.</p>
+                
+                <p class="left_text">Movie genres today are more numerous and less pure in the sense that hybrid and crossover films exist. Filmmakers play with genre theory and audience expectations to tell stories in different ways.</p>
+
+                <h2 class="left_title">Why should you learn about genre?</h2>
+
+                <p class="left_text">There are storytellers and filmmakers who live inside particular genres, and you may even hear some of them say, “I make genre movies.” This seems simple enough on the surface, but being a ‘genre storyteller’ requires you to fully understand what your specific genre means. </p>
+
+                <p class="left_text">Understanding film genres is important when discussing film theory and helps you compare genre elements and the work of filmmakers when critically analyzing movies. We’ll give you an introduction to movie genres and why they’re useful before diving into a definitive genre list with important subgenres.</p>
+            </td>
+            
+            <td class="main_top">
+                <img class="image_center" src="./img/cinema.png" alt="Cinema">
+            </td>
+            
+            <td class="right_top" rowspan="2">
+                <h2 class="right_top_title">Genre Categories</h2>
+                
+                <p class="right_top_text">From a personal perspective, you might only need two categories to sort movies: those you’ve seen and those you still want to see. You might also categorize films into those you like and those you dislike. Such a binary approach has its advantages: you instantly know where a title falls.</p>
+                <p class="right_top_text">Blockbuster entertainment or arthouse cinema. Big studio production or independent. Foreign or domestic film. However, such a false dichotomy ignores many other defining aspects of movies. The categorization of titles into film genres offers minimal characterization and facilitates the grouping of similar movies.</p>
+                
+                <h2 class="right_top_title">Basic movie genres</h2>
+                
+                <ul class="right_top_list">
+                    <li class="right_list_line"><strong>Action</strong></li>
+                    <li class="right_list_line"><strong>Comedy</strong></li>
+                    <li class="right_list_line"><strong>Documentary</strong></li>
+                    <li class="right_list_line"><strong>Drama</strong></li>
+                    <li class="right_list_line"><strong>Fantasy</strong></li>
+                    <li class="right_list_line"><strong>Horror</strong></li>
+                    <li class="right_list_line"><strong>Musical</strong></li>
+                    <li class="right_list_line"><strong>Mystery</strong></li>
+                    <li class="right_list_line"><strong>Romance</strong></li>
+                    <li class="right_list_line"><strong>Science Fiction</strong></li>
+                    <li class="right_list_line"><strong>Thriller</strong></li>
+                    <li class="right_list_line"><strong>Western</strong></li>
+                </ul>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="main_down" rowspan="2">
+                <h2 class="center_title">What are movie genres?</h2>
+                <p class="center_text">
+                Genre describes a category for a work of art or entertainment based on certain criteria. These can define both the content and the style. In filmmaking, genre elements can therefore answer one of two questions: what story is it, and how is the story told? Genre can touch on:</p>
+
+                <ul class="center_list">
+                    <li class="center_list_line"><b>Setting:</b> Where does the story take place?</li>
+                    <li class="center_list_line"><b>Characters:</b> Who is the main character or ensemble of main characters, and which antagonists do they face?</li>
+                    <li class="center_list_line"><b>Plot:</b> What is happening in the story? Do the heroes go on a quest, or does the main character solve a crime, riddle, or mystery?</li>
+                    <li class="center_list_line"><b>Theme:</b> What is the underlying universal theme of the story, for example, forgiveness, love, death, or friendship?</li>
+                    <li class="center_list_line"><b>Mood and tone:</b> Is it dark or light-hearted, gloomy, mysterious, or inspiring?</li>
+                    <li class="center_list_line"><b>Narration:</b> Are there typical narrative techniques, such as voice-over narration, on-screen titles, excessive flashbacks, or a non-linear storyline?</li>
+                </ul>
+                
+                <p class="center_text">
+                Most movies are mixed or hybrid genres and have elements of more than one genre. The division can be clear-cut, where one genre is dominant, or the attribution can be up for discussion. The main genre category indicates where most of the film fits. Subgenres further define a main category or blend two separate genres, such as an action-thriller.</p>
+                
+                <p class="center_text">
+                Main genres offer further classification through subgenres and define the dominant style of a film. They can appear in combination with other genres. When talking about titles that blend movie genres, we often use defining phrases such as “in the style of” or “with elements of” to show a crossover.</p>
+                
+                <p class="center_text">
+                For example, a science-fiction thriller with horror elements in the style of a heist movie. Such a movie might be neither here nor there, but from the classification alone, we could expect a story set in space or a world dominated by Sci-Fi elements, yet told with heightened emotions, anxiety, and suspense, like a thriller, and shocking, frightening, or gruesome elements, like a horror movie. The heist movie style could mean the assembling of a team of specialized characters by a mastermind to perform a task together.</p>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="right_down">
+                <h2 class="right_down_title">How to determine a movie genre?</h2>
+                <ol class="right_down_list">
+                    <li class="right_down_list_link"><strong>Has the ability to generate sub-genres</strong></li>
+                    <li class="right_down_list_link"><strong>Describes the style of a work of entertainment</strong></li>
+                    <li class="right_down_list_link"><strong>Can be combined with other genres if needed</strong></li>
+                </ol>
+            </td>
+        </tr>
+    </table>
+    
+    <table class="footer_table">
+        <tr class="footer" colspan="3">
+            <td class="footer_box">
+               <a href="#" target="_blank">
+               <img class="footer_img" src="./img/flag.png" alt="Ukraine flag">
+               </a>
+               <p class="footer_text">© 2023. All right reserved</p>
+            </td>
+            
+            <td class="title_footer">
+                <p class="footer_text_title"><i>Hope you find interesting information <br> about film genres!</i></p>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
