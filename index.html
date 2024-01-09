@@ -32,9 +32,7 @@
             border-collapse: collapse;
         }
 
-
-
-
+        
         /*==========Header==========*/
         .header {
             margin: 0;
@@ -75,7 +73,6 @@
             max-width: 45px;
         }
 
-
         .menu_link {
             color: #fff;
             margin-left: 50px;
@@ -107,9 +104,28 @@
             color: #ffa51f;
             padding-left: 10px;
         }
+        
+        .Menu {
+            position: relative;
+            height: 26px;
+            width: 34px;
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 0;
+        }
 
+        .Menu::before,
+        .Menu::after {
+            content: "";
+            background-color: #ffa51f;
+            height: 3px;
+        }
 
-
+        .Menu span {
+            height: 3px;
+            background-color: #ffa51f;
+        }
 
 
         /*==========Main==========*/
@@ -274,8 +290,6 @@
         }
 
 
-
-
         /*==========Footer==========*/
         .footer {
             margin: 0;
@@ -325,12 +339,30 @@
             max-width: 70px;
             max-height: 70px
         }
+        
+        
+        
+        /*==========Adaptive==========*/
+        @media screen and (max-width: 1050px) {
+
+            .menu_link {
+                display: none;
+            }
+            
+            .header_title {
+                width: 30%;
+            }
+            
+            .Menu {
+                display: flex;
+                left: 100%;
+            }
+        }
 
     </style>
 </head>
 
 <body>
-   
    <table class="header_table">
         <tr class="header" colspan="3">
             <td class="header_title">
@@ -344,6 +376,9 @@
                 <a class="menu_link" href="#">Sci-Fi</a>
                 <a class="menu_link" href="#">Fantasy</a>
                 <a class="menu_link" href="#">Historical</a>
+                <a href="" class="Menu" id="navToggle">
+                    <span></span>
+                </a>
             </td>
         </tr>
     </table>
@@ -444,6 +479,5 @@
             </td>
         </tr>
     </table>
-
 </body>
 </html>
